@@ -8,8 +8,8 @@ class Assigments extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      home: Assignment1(),
-      color: Colors.deepPurple.shade400,
+      home: Assignment2(),
+      //color: Colors.deepPurple.shade400,
       debugShowCheckedModeBanner: false,
     );
   }
@@ -109,6 +109,62 @@ class Assignment1 extends StatelessWidget{
         ),
       ),
       backgroundColor: Colors.lightGreen.shade200,
+    );
+  }
+}
+
+class Assignment2 extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children:[
+            Container(
+              width: 320,
+              height: 400,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/assignment2.jpg"),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(30)
+              ),
+            ),
+            //SizedBox(height: 30),
+            Column(
+              children: [
+                Text("Tang San",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20,
+                  ),
+                ),
+                SizedBox(height: 10,),
+                Text("This anime is called Soul Land",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
+              ],
+            ),
+            Container(
+              width: 48,
+              height: 48,
+              decoration: BoxDecoration(
+                color: Colors.blueAccent.shade200,
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(
+                Icons.arrow_forward,
+                color: Colors.white,
+                size: 24,
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
