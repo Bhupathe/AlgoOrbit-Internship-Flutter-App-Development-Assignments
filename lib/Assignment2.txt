@@ -1,0 +1,65 @@
+class Assignment2 extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children:[
+            /*Container(
+              width: 320,
+              height: 400,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("assets/assignment2.jpg"),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(30)
+              ),
+            ),*/
+
+            // This will also show the image but not too modificable
+            Image.asset(
+              'assets/car.jpg',
+              width: 320,
+              height: 400,
+              fit: BoxFit.cover,
+            ),
+            //SizedBox(height: 30),
+            Column(
+              children: [
+                Text(//"Tang San",
+                  "CarPoolin",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w700,
+                    fontSize: 20,
+                  ),
+                ),
+                SizedBox(height: 10,),
+                Text(//"This anime is called Soul Land",
+                  "Drive & Save Money",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w300,
+                  ),
+                ),
+              ],
+            ),
+            Container(
+              width: 55,
+              height: 55,
+              decoration: BoxDecoration(
+                color: Colors.blueAccent.shade200,
+                shape: BoxShape.circle,
+              ),
+              child: const Icon(
+                Icons.arrow_forward,
+                color: Colors.white,
+                size: 24,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
